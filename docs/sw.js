@@ -1,21 +1,21 @@
 // Names of the two caches used in this version of the service worker.
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
-const NOME_CACHE_ATUAL = 'precache-v27';
+const NOME_CACHE_ATUAL = 'precache-v28';
 const RUNTIME = 'runtime';
 
 console.log("versão do sw1" + NOME_CACHE_ATUAL);
 
 
 
-if(window.navigator && navigator.serviceWorker) {
-  navigator.serviceWorker.getRegistrations()
-  .then(function(registrations) {
-    for(let registration of registrations) {
-      registration.unregister();
-    }
-  });
-}
+//if(window.navigator && navigator.serviceWorker) {
+//  navigator.serviceWorker.getRegistrations()
+//  .then(function(registrations) {
+//    for(let registration of registrations) {
+//      registration.unregister();
+//    }
+//  });
+//}
 
 //if, se o nome for diferente, resetar o service work.
  //if (NOME_CACHE_ATUAL !== cacheName)  {
@@ -39,8 +39,8 @@ if(window.navigator && navigator.serviceWorker) {
 // A list of local resources we always want to be cached.
 const CONTEUDO_DO_CACHE = [
   './', // Alias for index.html
-  'styles.css',
-  'app.js'
+  'styles.css'
+ // 'app.js'
 ];
 
 // The install handler takes care of precaching the resources we always need.
