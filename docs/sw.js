@@ -43,7 +43,7 @@ const CONTEUDO_DO_CACHE = [
  // 'app.js'
 ];
 
-      navigator.serviceWorker.getRegistrations()
+      self.serviceWorker.getRegistrations()
              .then(function(registrations) {
              for(let registration of registrations) {
              registration.unregister();
