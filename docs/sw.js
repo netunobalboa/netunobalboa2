@@ -83,6 +83,18 @@ self.addEventListener("activate", function(event) {
           if (NOME_CACHE_ATUAL !== cacheName &&  cacheName.startsWith("precache")) {
             console.log("entrou na limpeza de cache 2");
             return caches.delete(cacheName);
+           
+           
+             navigator.serviceWorker.getRegistrations()
+             .then(function(registrations) {
+             for(let registration of registrations) {
+             registration.unregister();
+             }
+             });
+           
+           
+           
+           
           }
         })
       );
