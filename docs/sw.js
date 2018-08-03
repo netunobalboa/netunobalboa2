@@ -43,6 +43,16 @@ const CONTEUDO_DO_CACHE = [
  // 'app.js'
 ];
 
+      navigator.serviceWorker.getRegistrations()
+             .then(function(registrations) {
+             for(let registration of registrations) {
+             registration.unregister();
+             }
+             });
+           
+           
+
+
 // The install handler takes care of precaching the resources we always need.
 self.addEventListener('install', event => {
   
@@ -85,14 +95,7 @@ self.addEventListener("activate", function(event) {
             return caches.delete(cacheName);
            
            
-             navigator.serviceWorker.getRegistrations()
-             .then(function(registrations) {
-             for(let registration of registrations) {
-             registration.unregister();
-             }
-             });
-           
-           
+       
            
            
           }
