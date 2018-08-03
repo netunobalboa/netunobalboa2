@@ -6,16 +6,10 @@ const RUNTIME = 'runtime';
 
 console.log("versão do sw1" + NOME_CACHE_ATUAL);
 
+if ('serviceWorker' in navigator) {
+ console.log("entrou no sw aqui oh oh oh ");
+}
 
-
-//if(window.navigator && navigator.serviceWorker) {
-//  navigator.serviceWorker.getRegistrations()
-//  .then(function(registrations) {
-//    for(let registration of registrations) {
-//      registration.unregister();
-//    }
-//  });
-//}
 
 //if, se o nome for diferente, resetar o service work.
  //if (NOME_CACHE_ATUAL !== cacheName)  {
@@ -43,13 +37,7 @@ const CONTEUDO_DO_CACHE = [
  // 'app.js'
 ];
 
-      self.getRegistrations()
-             .then(function(registrations) {
-             for(let registration of registrations) {
-             registration.unregister();
-             }
-             });
-           
+
            
 
 
