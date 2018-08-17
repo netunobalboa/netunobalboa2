@@ -132,7 +132,7 @@ self.addEventListener("activate", function(event) {
 
 // Serve from Cache
 self.addEventListener("fetch", event => {
-  console.log("entrou no fetch");
+  console.log("entrou no fetch2");
   event.respondWith(
     caches.match(event.request)
       .then(response => {
