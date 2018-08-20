@@ -1,7 +1,7 @@
 // Names of the two caches used in this version of the service worker.
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
-const NOME_CACHE_ATUAL = 'precache-v39';
+const NOME_CACHE_ATUAL = 'precache-v40';
 const RUNTIME = 'runtime';
 
 console.log("versão do sw1" + NOME_CACHE_ATUAL);
